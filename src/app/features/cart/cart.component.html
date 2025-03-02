@@ -25,10 +25,10 @@
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">Order Summary</h5>
-            <p>Subtotal: ₦{{ cartService.getTotalCost() }}</p>
-            <p>Discount: ₦{{ cartService.getDiscount() }}</p>
-            <p>Shipping: ₦{{ cartService.getShippingCost() }}</p>
-            <p><strong>Total: ₦{{ cartService.getFinalTotal() }}</strong></p>
+            <p>Subtotal: ₦{{ cartService.getTotalCost() | number }}</p>
+            <p>Discount: ₦{{ cartService.getDiscount() | number }}</p>
+            <p>Shipping: ₦{{ cartService.getShippingCost() | number}}</p>
+            <p><strong>Total: ₦{{ cartService.getFinalTotal() | number }}</strong></p>
           </div>
     </div>
   
