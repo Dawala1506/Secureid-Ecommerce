@@ -1,0 +1,37 @@
+<div class="container mt-4">
+    <!-- Coupon Section -->
+    <div class="d-flex justify-content-end mb-3">
+      <div>
+        <input type="text" [(ngModel)]="couponCode" placeholder="Enter coupon code" class="form-control d-inline w-auto">
+        <button class="btn btn-success ml-2 mx-2" (click)="applyCoupon()">Apply Coupon</button>
+      </div>
+    </div>
+  
+    <!-- Cart Items -->
+    <div *ngFor="let item of cartService.getCartItems()" class="card mb-3">
+      <div class="card-body d-flex justify-content-between align-items-center">
+        <div>
+          <h5 class="card-title">{{ item.product.name }}</h5>
+          <p class="card-text">Price: ${{ item.product.price }}</p>
+        </div>
+        <div>
+          <input type="number" [(ngModel)]="item.quantity" (change)="cartService.updateQuantity(item.product.id, item.quantity)" min="1" class="form-control">
+          <button class="btn btn-danger mt-2" (click)="cartService.removeFromCart(item.product.id)">Remove</button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Order Summary -->
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Order Summary</h5>
+            <p>Subtotal: ₦{{ cartService.getTotalCost() }}</p>
+            <p>Discount: ₦{{ cartService.getDiscount() }}</p>
+            <p>Shipping: ₦{{ cartService.getShippingCost() }}</p>
+            <p><strong>Total: ₦{{ cartService.getFinalTotal() }}</strong></p>
+          </div>
+    </div>
+  
+    <!-- Clear Cart Button -->
+    <button class="btn btn-danger mt-3" (click)="cartService.clearCart()">Clear Cart</button>
+  </div>

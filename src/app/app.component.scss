@@ -1,0 +1,36 @@
+/* Header Styles */
+header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  header nav a {
+    font-size: 16px;
+  }
+  
+  header .form-control {
+    width: 300px; /* Adjust search bar width */
+  }
+  
+  /* Categories Section Styles */
+.categories-section {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .icon-large {
+    font-size: 24px; /* Adjust icon size */
+    width: 24px;
+    height: 24px;
+    color: #3498db; /* Icon color */
+  }
+  
+  .categories-section h4 {
+    font-size: 18px;
+    color: #2c3e50;
+    margin: 0; /* Remove default margin */
+  }

@@ -1,0 +1,16 @@
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none; 
+  }
+  
+  .card:hover {
+    transform: perspective(1000px) translateY(-5px) rotateX(5deg) rotateY(5deg); 
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    object-position: center; 
+    width: 100%; 
+  }
